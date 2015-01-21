@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>仿酷狗音乐pc界面</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!-- 总内容开始 -->
+	<section id="main" class="boxS">
+		<!-- 相对定位的层 -->
+		<div class="main_box">
+			<!-- 内容的上部 -->
+			<div class="main">
+				<!-- 内容上部的左边 -->
+				<div class="main_left">
+					<!-- 内容上部左边的顶部即音乐播放 -->
+					<div class="music_top boxS f12">
+						<!-- 音乐播放顶部 -->
+						<div class="music_top_top clearfix">
+							<!-- 音乐音质选择 -->
+							<div class="music_top_top_tone fl">
+								<!-- 音质的显示 -->
+								<span>标准</span>
+								<!-- 三角 -->
+								<i></i>
+							</div>
+							<!-- 音乐名字 -->
+							<p class="fl">陈百强&nbsp;-&nbsp;明天我依然爱你</p>
+							<!-- 右边的三个工具 -->
+							<ul class="music_top_top_tool fr">
+								<li class="fl"><a href="#" class="icon-font f16">&#xe9c7;</a></li>
+								<li class="fl"><a href="#" class="icon-font f16">&#xe9da;</a></li>
+								<li class="fl"><a href="#" class="icon-font f16">&#xea7d;</a></li>
+							</ul>
+						</div>
+						<!-- 播放条 -->
+						<div class="player boxS clearfix">
+							<!-- 播放条底层 -->
+							<span class="player_down"></span>
+							<!-- 播放条上层 -->
+							<span class="player_up"></span>
+							<!-- 播放条圆 -->
+							<span class="player_circle"><i class="on"></i></span>
+							<p>
+								<span class="fl">00:00</span>
+								<span class="fr">04:00</span>
+							</p>
+						</div>
+						<!-- 播放控件 -->
+						<div class="player_tool clearfix boxS">
+							<!-- 歌词和列表循环模式 -->
+							<div class="fl player_tool_l">
+								<!-- 歌词 -->
+								<span class="icon_tool icon_tool_lyric">
+									<i>词</i>
+								</span>
+								<!-- 循环模式 -->
+								<div class="icon_tool icon-font icon_tool_pattern">
+									&#xea30;
+								</div>
+							</div>
+							<!-- 上一首,暂停(播放),下一首 -->
+							<div class="fl player_tool_main">	
+								<!-- 上一首 -->
+								<span class="icon_tool icon-font icon_tool_perv fl">&#xea18;</span>
+								<!-- 播放 -->
+								<span class="icon_tool icon-font icon_tool_player">&#xea15;</span>
+								<!-- 下一首 -->
+								<span class="icon_tool icon-font icon_tool_next fr">&#xea19;</span>
+							</div>
+							<!-- 音量大小和音质控制 -->
+							<div class="fr player_tool_r">
+								<!-- 音量大小 -->
+								<span class="icon_tool icon-font icon_tool_music">&#xea27;</span>
+								<!-- 音质控制 -->
+								<div class="icon_tool icon_tool_sound boxS clearfix">
+									<i class="fl"></i>
+									<span class="fl">丽音</span>
+								</div>
+							</div>							
+						</div>
+					</div>
+					<!-- 内容中部,即音乐播放列表 -->
+					<div class="music_main clearfix">
+						<!-- 音乐播放列表的tab菜单 -->
+						<ul class="music_list fl">
+							<li><a href="#" class="icon-font">&#xe911;</a></li>
+							<li><a href="#" class="icon-font">&#xe9c1;</a></li>
+							<li><a href="#" class="icon-font">&#xe91c;</a></li>
+							<li><a href="#" class="icon-font">&#xe928;</a></li>
+							<li><a href="#" class="icon-font">&#xe9c7;</a></li>
+							<li><a href="#" class="icon-font">&#xeac3;</a></li>
+						</ul>
+						<!-- 播放列表的外层 已经overflow -->
+						<div class="music_box fr">
+							<div class="music_list_box">
+								<div class="music_tab">
+									<ul class="music_tab_list">
+										<li>
+											<div class="music_tab_list_top clearfix">
+												<i class="triangle-top fl"></i>
+												<span class="fl">默认列表[<span class="music_tab_rs">20</span>]</span>
+												<div class="music_tab_slide">
+													<span class="icon-font">&#xe9bf;</span>
+												</div>
+											</div>
+											<ul>
+												<li>
+													<!-- 静止状态 -->
+													<div class="music_tab_list_stop clearfix">
+														<i class="fl">01</i>
+														<span class="list_name fl">陈百强 - 明天我依然爱你</span>
+														<span class="list_movie icon-font fl f14">&#xe913;</span>
+														<span class="list_time fr">04:00</span>
+													</div>
+													<!-- hover壮态 -->
+													<div class="music_tab_list_stop music_tab_list_hover clearfix">
+														<i class="fl icon-font">&#xea15;</i>
+														<span class="list_name fl">陈百强 - 明天我依然爱你</span>
+														<span class="list_movie icon-font fl">&#xe913;</span>
+														<span class="list_mobile icon-font fl">&#xe958;</span>
+														<span class="list_add icon-font fl">&#xea0a;</span>
+														<span class="list_del icon-font fl">&#xe9ac;</span>
+													</div>
+													<!-- 点击后的壮态 -->
+													<div class="music_tab_list_stop 
+													music_tab_list_click clearfix">
+														<div class="music_tab_list_img fl">
+															<img src="images/img1.jpg" height="52" width="52" alt="">
+														</div>
+														<div class="music_tab_list_content fl">
+															<p class="clearfix">
+																<span class="fl"><a href="#">陈百强</a> - <a href="#">明天我依然爱你</a></span>
+																<span class="icon-font fr f14">&#xe9ac;</span>
+																<span class="pr10 fr">荐</span>
+															</p>
+															<p>
+																<div class="clearfix fl">					
+																	<span class="fl pr10">00:00/04:00</span>
+																	<span class="icon-font f14 fl">
+																		&#xe9c7;
+																	</span>
+																</div>
+																<div class="fr">
+																	<span class="list_movie icon-font fl pl20 f14">&#xe913;</span>
+																	<span class="list_mobile icon-font fl pr10 f14">&#xe958;</span>
+																	<span class="list_add icon-font fl pr10 f14">&#xea0a;</span>
+																	<span class="list_del icon-font fl f14">&#xe9ac;</span>
+																</div>
+															</p>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<div class="music_tab_list_top clearfix">
+												<i class="triangle-right fl"></i>
+												<span class="fl">默认列表[<span class="music_tab_rs">20</span>]</span>
+												<div class="music_tab_slide">
+													<span class="icon-font">&#xe9bf;</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 内容上部的右边 -->
+				<div class="main_right">
+					
+				</div>
+			</div>
+			<!-- 内容的底部 -->
+			<footer class="footer">
+				<!-- 底部内容的左边  宽度要跟内容的顶部的左边宽度一样 -->
+				<div class="main_left fl boxS">
+					<!-- 歌曲四个操作按妞 -->
+					<ul>
+						<li class="fl f24"><a href="javascript:;" class="icon-font" title="添加歌曲/文件夹">&#xea0a;</a></li>
+						<li class="fl f24"><a href="javascript:;" class="icon-font" title="定位当前播放歌曲">&#xe9b3;</a></li>
+						<li class="fl f24"><a href="javascript:;" class="icon-font" title="查找歌曲">&#xe986;</a></li>
+						<li class="fl f24"><a href="javascript:;" class="icon-font" title="传歌到手机">&#xe959;</a></li>
+					</ul>
+				</div>
+				<div class="main_right fr footer_right">
+					<!-- 底部广告之左边 -->
+					<ul class="footer_mr_nav fl">
+						<li><a href="javascript:;" class="icon-kugo" title="酷狗网页游戏平台">酷狗网页游戏平台</a></li>
+						<li><a href="javascript:;" class="icon-mkugo" title="手机版酷狗">手机版酷狗</a></li>
+						<li><a href="javascript:;" class="icon-faxi" title="酷狗繁星演艺平台">酷狗繁星演艺平台</a></li>
+					</ul>
+					<!-- 底部广告之右边 -->
+					<ul class="footer_mr_news fr">
+						<li><a href="#">新闻内容</a></li>
+						<li><a href="#">新闻内容</a></li>
+						<li><a href="#">新闻内容</a></li>
+						<li><a href="#">新闻内容</a></li>
+						<li><a href="#">新闻内容</a></li>
+					</ul>
+					<!-- 右下角的可拉伸的图标 -->
+					<i></i>
+				</div>
+			</footer>
+		</div>
+	</section>
+</body>
+</html>

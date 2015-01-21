@@ -1,0 +1,504 @@
+@import url(reset.css);
+body{font-family: "宋体";}
+.fl{float: left;}
+.fr{float: right;}
+.f12{font-size: 12px;}
+.f14{font-size: 14px;}
+.f16{font-size: 16px;}
+.f24{font-size: 24px;}
+.pr10{padding-right: 10px;}
+.pl20{padding-left: 20px;}
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+i{font-style: normal;}
+.clearfix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+.triangle-top {display:block;width: 0;height: 0;border:5px solid transparent; border-top-color:#4c4343;overflow: hidden;}
+.triangle-right {display:block;width: 0;height: 0;border:5px solid transparent; border-left-color:#4c4343;overflow: hidden;}
+.boxS{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;}
+/*自定义字体部分*/
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-ipe2nu');
+	src:url('fonts/icomoon.eot?#iefix-ipe2nu') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-ipe2nu') format('woff'),
+		url('fonts/icomoon.ttf?-ipe2nu') format('truetype'),
+		url('fonts/icomoon.svg?-ipe2nu#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.icon-font {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: rgba(255,255,255,.7);
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-font:hover{
+	text-shadow:0 0 3px #fff;
+}
+/*#main 是总的盒子。背景是使用css3来定义的他的背景会自适应盒子的大小*/
+#main{
+	width: 1001px;
+	height: 604px;
+	position: absolute;
+	top:50px;
+	left:50%;
+	background: url(../images/bg.jpg) no-repeat;
+	background-size: cover;
+	margin-left: -502px;
+	border:1px solid rgba(0,0,0,.6);
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: inset 0 1px 1px 0 rgba(255,255,255,.7),0  5px 30px 5px #666;
+}
+/*.main_box 用于相对定位的。给后面的一些弹出的信息和需要绝对定义使用的*/
+.main_box{
+	width:100%;
+	height: 100%;
+	position:relative;
+}
+.main_left{
+	width: 360px;
+}
+.main_right{
+	width: 639px;
+}
+/*顶部*/
+.music_top{
+	width: 100%;
+	height: 112px;
+	padding:3px 0 0 14px;
+}
+.music_top .music_top_top{
+	padding:0 8px 0 13px;	
+	color:#fff;
+}
+.music_top .music_top_top .music_top_top_tone{
+	position: relative;
+	width: 44px;
+	height: 25px;
+	line-height: 25px;
+	cursor: pointer;
+	background: rgba(0,0,0,.3);
+	box-shadow:inset 0 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(255,255,255,.3);
+}
+.music_top .music_top_top .music_top_top_tone:hover{
+	background: rgba(0,0,0,.5);
+	box-shadow:inset 0 1px 0 rgba(0,0,0,.8),inset 0 -1px 0 rgba(255,255,255,.8);
+}
+.music_top .music_top_top .music_top_top_tone:hover i{
+	border-top-color:#fff;
+}
+.music_top .music_top_top .music_top_top_tone span,.music_top .music_top_top .music_top_top_tone i{
+	display: inline-block;
+}
+.music_top .music_top_top .music_top_top_tone span{
+	padding-right: 10px;
+}
+.music_top .music_top_top .music_top_top_tone i{
+	position: absolute;
+	top:10px;
+	right: 3px;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 4px solid transparent;
+	border-top-color:#ccc;
+}
+/*音乐名字*/
+.music_top .music_top_top p{
+	width: 160px;
+	line-height: 25px;
+	padding-left: 10px;
+	text-align: left;
+}
+/*音乐的三个工具*/
+.music_top_top_tool li a{
+	padding: 0 10px;
+}
+/*播放条*/
+.player{
+	width: 100%;
+	padding-right: 13px;
+	position: relative;
+	color:#fff;
+}
+.player span{
+	display: block;
+}
+/*播放条底层*/
+.player .player_down{
+	position: absolute;
+	left:0;
+	top:7px;
+	width: 333px;
+	height: 2px;
+	background-color: rgba(0,0,0,.3);
+	border-top: 1px solid rgba(0,0,0,.2);
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+/*播放条顶层*/
+.player .player_up{
+	position: absolute;
+	left:0;
+	top:7px;
+	width: 50%;
+	max-width: 333px;
+	height: 4px;
+	background-image: -webkit-linear-gradient(left,#70f6ee,#eaf266);
+}
+/*播放条圆*/
+.player .player_circle{
+	position: relative;
+	width: 100%;
+	height: 9px;
+}
+.player .player_circle i{
+	display: block;
+	width: 9px;
+	height: 9px;
+	position: absolute;
+	top:4px;
+	left:52%;
+	border-radius: 50%;
+	background-color: #fff;
+}
+/*播放条的圆在播放的时候加的动画类名*/
+.player .player_circle i.on{
+	box-shadow: 0 0 20px 5px #fff;
+	animation:myfirst 3s infinite;
+	-moz-animation:myfirst 3s infinite; /* Firefox */
+	-webkit-animation:myfirst 3s infinite; /* Safari and Chrome */
+	-o-animation:myfirst 3s infinite; /* Opera */
+}
+/*播放条的圆的动画*/
+@keyframes myfirst
+{
+0%{
+		box-shadow: 0 0 20px 10px #fff; 
+	}
+	50%{
+		box-shadow: 0 0 0 0px #fff;
+	}
+	100%{
+		box-shadow: 0 0 20px 10px #fff;
+	}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%{
+		box-shadow: 0 0 20px 10px #fff; 
+	}
+	50%{
+		box-shadow: 0 0 0 0px #fff;
+	}
+	100%{
+		box-shadow: 0 0 20px 10px #fff;
+	}
+}
+/*播放工具*/
+.player_tool{
+	width: 100%;
+	height: 56px;
+	text-align: left;
+	padding-top: 5px;
+	padding-right: 13px;
+}
+.player_tool .player_tool_l,.player_tool .player_tool_r{
+	padding: 10px 0;
+}
+/*播放工具统一设置*/
+.player_tool .icon_tool{
+	display: inline-block;
+	font-size: 18px;
+	padding-right: 10px;
+	cursor:pointer;
+}
+/* 歌词工具设置 */
+.player_tool .icon_tool_lyric i{
+	display: block;
+	width: 17px;
+	height: 16px;
+	background-color: #ece7e7;
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 16px;
+	text-align: center;
+	color: rgba(255,255,255,1);
+	margin-top: -13px;
+}
+/*播放设置*/
+.player_tool .icon_tool_player{
+	position: absolute;
+	left:50%;
+	top:-5px;
+	width: 50px;
+	margin-left: -18px;
+	font-size: 40px;
+}
+/*上一首和下一首设置*/
+.player_tool .icon_tool_perv,.player_tool .icon_tool_next{
+	font-size: 28px;
+	line-height: 50px;
+}
+.player_tool .icon_tool_perv{
+	padding-left: 20px;
+}
+.player_tool .icon_tool_next{
+	padding-right: 20px;
+}
+/*分开部分设置*/
+.player_tool_main{
+	position: relative;
+	width: 160px;
+	padding: 0 10px;
+}
+/*音量设置*/
+.player_tool .icon_tool_music{
+	margin-top: -5px;
+}
+/*音质设置*/
+.player_tool .icon_tool_sound{
+	width: 55px;
+	background-color: rgba(0,0,0,.5);
+	text-align: center;
+	border-radius: 14px;
+	padding: 2px 5px;
+	padding-left: 7px;
+	height: 25px;
+	line-height: 25px;
+}
+/*音质的小圆和音质的文字设置*/
+.player_tool .icon_tool_sound i,.player_tool .icon_tool_sound span{
+	font-size: 12px;
+	color: #ccc;
+	line-height: 21px;	
+}
+/*音质小圆*/
+.player_tool .icon_tool_sound i{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #5cff77;
+	margin: 6px 0 0 3px;
+}
+/*音质文字*/
+.player_tool .icon_tool_sound span{
+	padding-left: 4px;
+}
+/*音乐列表设置*/
+.music_main{
+	width: 100%;
+	height: 450px;
+}
+/*音乐列表左边*/
+.music_list{
+	width: 48px;
+	height: 450px;
+}
+.music_list li a{
+	display: block;
+	padding: 15px 0;
+	font-size: 22px;
+}
+.music_list li a:hover{
+	text-shadow: none;
+	background-color: rgba(0,0,0,.3);
+	color: #fff;
+}
+/*音乐列表右边的*/
+.music_box{
+	width: 312px;
+	height: 450px;
+	background-color: rgba(255,255,255,.5);
+	overflow: hidden;
+}
+	/*用来装他下面的几个列表*/
+	.music_box .music_list_box{
+	}
+		/*下面的几个大类*/
+		/*.music_tab_list{
+			padding:0 27px 0 10px; 
+		}*/
+		.music_tab_list>li{
+			line-height: 28px;
+			color:#4c4343;
+			border-bottom: 1px solid #837a7e;
+			padding-left:10px; 
+			box-shadow: 0 1px 0 rgba(255,255,255,.2);
+			position: relative;
+		}
+		.music_tab_list .triangle-right,.music_tab_list .triangle-top{
+			margin-top: 8px;
+			margin-right: 5px;
+		}
+		.music_tab_list .triangle-top{
+			margin-top: 10px;
+		}
+		.music_tab_list>li>span{
+			font-weight: 700;
+		}
+		.music_tab_list .music_tab_slide .icon-font{
+			position:absolute;
+			right: 10px;
+			font-size: 16px;
+			color: rgba(74,70,72,.8);
+			text-shadow:0px 0px rgba(255,255,255,.5);
+			cursor: pointer;
+		}
+		.music_tab_list .music_tab_slide .icon-font:hover{
+			color:rgba(74,70,72,1);
+			text-shadow:none;
+		}
+		/*音乐列表*/
+		.music_tab_list_stop{
+			text-align: left;
+			padding-left: 10px;
+		}
+		.music_tab_list_stop .list_name{
+			padding-left: 5px;
+			width: 180px;
+		}
+		.music_tab_list_stop .list_movie{
+			font-size: 18px;
+			color:#4c4343;
+		}
+		.music_tab_list_stop .list_time{
+			padding-right: 10px;
+		}
+		.music_tab_list_hover i{
+			margin-left: -5px;
+			font-size: 12px;
+			color: #4c4343;
+		}
+		.music_tab_list_hover .list_name{
+			width:185px;
+		}
+		.music_tab_list_hover .list_movie,.music_tab_list_hover .list_mobile,.music_tab_list_hover .list_add,.music_tab_list_hover .list_del{
+			padding-left: 10px;
+			color: #ececec;
+			font-size: 14px;
+			text-shadow:0 0 3px #000;
+		}
+		.music_tab_list_hover .list_movie{
+			padding: 0;
+		}
+		.music_tab_list_hover .icon-font:hover{
+			text-shadow:0 0 3px #000;
+			cursor: pointer;
+			color: #fff;
+		}
+		/*点击状态*/
+		.music_tab_list_click{
+			background-color:#777;
+			margin-left: -5px;
+			padding: 0;
+			color:#fff; 
+		}
+			.music_tab_list_content{
+				width: 242px;
+			}
+			.music_tab_list_content a{
+				color:#ececec;
+				
+			}
+			.music_tab_list_content a:hover{
+				text-decoration: underline;
+			}
+			.music_tab_list_content p{width: 100%;padding-left: 5px;}
+/* 底部开始 */
+/*.footer 第二层级的底部，主要是显示底部的一些内容*/
+.footer{
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width: 100%;
+	height: 30px;
+}
+.footer .main_left,.footer .main_right{
+	height: 30px;
+	line-height: 30px;
+}
+.footer .main_left{
+	font-family: 'kugou';
+	padding-left: 46px;
+}
+.footer .main_left li{
+	width: 25%;
+	height: 30px;
+}
+/*右边的菜单*/
+.footer .footer_mr_nav{
+	width:30%;
+}
+.footer .footer_mr_nav li{
+	float: left;
+	text-align: center;
+	width: 33%;
+}
+.footer .footer_mr_nav li a{
+	display: block;
+	width: 20px;
+	height: 20px;	
+	padding: 0 10px;
+	margin: 5px auto 0;
+	text-indent: -9999em;
+	overflow: hidden;
+	background: url(../images/footer_right_icon.png) center center no-repeat;
+}
+.footer .footer_mr_nav li a.icon-mkugo{
+	background-position:center -5px;
+}
+.footer .footer_mr_nav li a.icon-faxi{
+	background-position:center -65px;
+}
+.footer .footer_mr_nav li a:hover{
+	background-color: rgba(255,255,255,0.5);
+	box-shadow: 0px 0px 0 1px rgba(255,255,255,.7);
+	border-radius: 2px;
+}
+.footer .footer_mr_news{
+	width: 200px;
+	padding-right: 20px;
+	text-align: right;
+	overflow: hidden;
+}
+.footer .footer_mr_news li{
+	height: 30px;
+	line-height: 30px;
+}
+.footer .footer_mr_news a{
+	color:#fff;
+}
+.footer .footer_mr_news a:hover{
+	text-decoration: underline;
+}
+/*用于定位*/
+.footer_right{
+	position: relative;
+}
+.footer_right i{
+	display: block;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	width: 7px;
+	height: 7px;
+	background: url(../images/footer_right_size.png) no-repeat center center;
+}
